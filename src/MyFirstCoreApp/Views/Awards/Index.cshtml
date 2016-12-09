@@ -1,0 +1,37 @@
+﻿@model IEnumerable<MyFirstCoreApp.Models.Award>
+
+@{
+    ViewData["Title"] = "Таблица";
+}
+
+<h2>Таблица наград</h2>
+
+<p>
+    <a asp-action="Create">Создать новую</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Название</th>
+            <th>Описание</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID">Редактировать</a> |
+                    <a asp-action="Details" asp-route-id="@item.ID">Подробнее</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID">Удалить</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

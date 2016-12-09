@@ -1,0 +1,21 @@
+﻿@model MyFirstCoreApp.Models.Rewarding
+
+@{
+    ViewData["Title"] = "Удалить";
+}
+
+<h2>Удалить награждение</h2>
+
+<h3>Вы уверены?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Удалить" class="btn btn-default" /> 
+            <a asp-action="Index">Вернуться к таблице</a>
+        </div>
+    </form>
+</div>
