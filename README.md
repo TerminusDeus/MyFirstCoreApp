@@ -7,3 +7,6 @@
 ### 4 MSSQL as default connection
 ### 5 based on https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro
 
+## TO-DO:
+### 1 css usage implementation
+### 2 helpful list of links
